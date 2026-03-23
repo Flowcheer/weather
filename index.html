@@ -6,19 +6,19 @@
     <link rel="stylesheet" href="src/style.css">
     <title>Weather App</title>
 </head>
-<body>
+<body class="sunny">
     <main>
     <h1>Clima</h1>
     <div class="container">
         <div class="block">
-            <p>Ciudad: <span id="ciudad">...</span></p>
+            <p><span id="ciudad">...</span></p>
         </div>
         <div class="block">
-            <img src="src/svgs/sunny.svg" width="128" id="icon">
-            <p><span id="temp">...</span>ºC</p>
-        </div>
-        <div class="block">
-            <p>Se siente como: <span id="feel">...</span> ºC</p>
+            <img src="src/svgs/sunny.svg" width="148" id="icon" class = "icon sunny">
+            <div>
+            <p style="color:rgb(124, 159, 241); font-size: 48px;"><span id="temp">...</span> ºC</p>
+            <p id="feeltext">Se siente: <span id="feel">...</span> ºC</p>
+            </div>
         </div>
     </div>
     </main>

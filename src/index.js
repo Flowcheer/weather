@@ -7,7 +7,7 @@ const feelSpan = document.getElementById("feel")
 
 window.addEventListener("load",() => {
     if("geolocation" in navigator){
-    navigator.geolocation.getCurrentPosition((pos) => {getWeather(pos.coords.latitude,pos.coords.longitude)},()=>getWeather(10,10))
+    navigator.geolocation.getCurrentPosition((pos) => {getWeather(pos.coords.latitude,pos.coords.longitude)},()=>getWeather(10.42,-75.49))
     } else{
     getLocFromIp()
     }
@@ -39,12 +39,15 @@ function changeValues(weather){
 
     if(weather_desc == 801){
         icon.src = "src/svgs/cloudy.svg"
-        document.body.style.backgroundImage = "url(src/backgrounds/cloudy.webp)"
+        icon.className = "icon cloudy"
+        document.body.className = "cloudy";
     } else if (weather_desc == 501){
         icon.src = "src/svgs/rain.svg"
-        document.body.style.backgroundImage = "url(src/backgrounds/rainy.webp)"
+        icon.className = "icon rainy"
+        document.body.className = "rainy";
     } else {
         icon.src = "src/svgs/sunny.svg"
-        document.body.style.backgroundImage = "url(src/backgrounds/sunny.webp)"
+        icon.className = "icon sunny"
+        document.body.className = "sunny";
     }
 }
